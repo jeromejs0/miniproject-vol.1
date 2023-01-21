@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    input {
+      border-style: solid;
+      border-width: 1px;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="form.js"></script>
+</head>
+
+<body>
+  <div>
+    <form action="resume.html" method="POST">
+      <div class="mt-10 sm:mt-0">
+        <div class="md:grid md:grid-cols-3 md:gap-6">
+          <div class="md:col-span-1">
+            <div class="px-4 sm:px-0">
+              <h3 class="text-lg font-medium leading-6 text-gray-900 m-5">Personal Information</h3>
+            </div>
+          </div>
+          <div class="mt-5 md:col-span-2 md:mt-0">
+
+            <div class="overflow-hidden shadow sm:rounded-md">
+              <div class="bg-white px-4 py-5 sm:p-6">
+                <div class="grid grid-cols-6 gap-6">
+                  <div class="col-span-6 sm:col-span-3">
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name:</label>
+                    <input type="text" name="name" id="name" autocomplete="given-name"
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm ">
+                  </div>
+
+                  <div class="col-span-6 sm:col-span-3">
+                    <label for="designation" class="block text-sm font-medium text-gray-700">Designation:</label>
+                    <input type="text" name="designation" id="designation" value="Pilot" autocomplete="family-name"
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                  </div>
+
+                  <div class="col-span-6 sm:col-span-4">
+                    <label for="email-address" class="block text-sm font-medium text-gray-700">Email address:</label>
+                    <input type="text" name="email-address" id="email-address" autocomplete="email"
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                  </div>
+                  <div class="col-span-6 sm:col-span-6 lg:col-span-2">
+                    <label for="city" class="block text-sm font-medium text-gray-700">Contact No:</label>
+                    <input type="number" name="contact" id="contact" autocomplete="address-level2"
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                  </div>
+
+                  <div class="col-span-6">
+                    <label for="street-address" class="block text-sm font-medium text-gray-700">Address:</label>
+                    <input type="text" name="Address" id="Address" autocomplete="street-address"
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                  </div>
+
+
+                  <div class="col-span-6 sm:col-span-6 lg:col-span-2">
+                    <label for="company-website" class="block text-sm font-medium text-gray-700">LinkedIn</label>
+                    <div class="mt-1 flex rounded-md shadow-sm">
+                      <span
+                        class="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-3 text-sm text-gray-500">http://</span>
+                      <input type="text" name="company-website" id="company-website"
+                        class="block w-full flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        placeholder="www.example.com">
+                    </div>
+                  </div>
+                  <div class="col-span-6">
+                    <label for="about" class="block text-sm font-medium text-gray-700">Profile:</label>
+                    <div class="mt-1">
+                      <textarea id="Profile" name="Profile" rows="3"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="col-span-6 sm:col-span-3">
+                    <label for="name" class="block text-sm font-medium text-gray-700">Website:</label>
+                    <input type="text" name="Website" id="Website" autocomplete=".com"
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm ">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden sm:block" aria-hidden="true">
+          <div class="py-5">
+            <div class="border-t border-gray-200"></div>
+          </div>
+        </div>
+        <div class="mt-10 sm:mt-0">
+          <div class="md:grid md:grid-cols-3 md:gap-6">
+            <div class="md:col-span-1">
+              <div class="px-4 sm:px-0">
+                <h3 class="text-lg font-medium leading-6 text-gray-900 m-5">Education Details</h3>
+              </div>
+            </div>
+            <div class="mt-5 md:col-span-2 md:mt-0">
+              <div class="overflow-hidden shadow sm:rounded-md">
+                <div class="bg-white px-4 py-5 sm:p-6">
+                  <div class="grid grid-cols-6 gap-6">
+                    <div class="col-span-6 sm:col-span-3">
+                      <label for="name" class="block text-sm font-medium text-gray-700">Graduation College
+                        Name:</label>
+                      <input type="text" name="college-name" id="college-name" autocomplete="given-name"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+
+                    <div class="col-span-6 sm:col-span-3">
+                      <label for="designation" class="block text-sm font-medium text-gray-700">Duration:</label>
+                      <input type="text" name="duration" id="duration" autocomplete="family-name"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+
+                    <div class="col-span-6">
+                      <label for="street-address" class="block text-sm font-medium text-gray-700">Location:</label>
+                      <input type="text" name="location" id="location" autocomplete="street-address"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+                    <div class="col-span-6 sm:col-span-3">
+                      <label for="name" class="block text-sm font-medium text-gray-700">12th College Name:</label>
+                      <input type="text" name="12college-name" id="12college-name" autocomplete="given-name"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+
+                    <div class="col-span-6 sm:col-span-3">
+                      <label for="designation" class="block text-sm font-medium text-gray-700">Duration:</label>
+                      <input type="text" name="12duration" id="12duration" autocomplete="family-name"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+
+                    <div class="col-span-6">
+                      <label for="street-address" class="block text-sm font-medium text-gray-700">Location:</label>
+                      <input type="text" name="12location" id="12location" autocomplete="street-address"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+                    <div class="col-span-6 sm:col-span-3">
+                      <label for="name" class="block text-sm font-medium text-gray-700">10th School Name:</label>
+                      <input type="text" name="10college-name" id="10college-name" autocomplete="given-name"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+
+                    <div class="col-span-6 sm:col-span-3">
+                      <label for="designation" class="block text-sm font-medium text-gray-700">Duration:</label>
+                      <input type="text" name="10duration" id="10duration" autocomplete="family-name"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+
+                    <div class="col-span-6">
+                      <label for="street-address" class="block text-sm font-medium text-gray-700">Location:</label>
+                      <input type="text" name="10location" id="10location" autocomplete="street-address"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden sm:block" aria-hidden="true">
+          <div class="py-5">
+            <div class="border-t border-gray-200"></div>
+          </div>
+        </div>
+
+        <div class="mt-10 sm:mt-0">
+          <div class="md:grid md:grid-cols-3 md:gap-6">
+            <div class="md:col-span-1">
+              <div class="px-4 sm:px-0">
+                <h3 class="text-lg font-medium leading-6 text-gray-900 m-5">Work Experience</h3>
+              </div>
+            </div>
+            <div class="mt-5 md:col-span-2 md:mt-0">
+              <div class="overflow-hidden shadow sm:rounded-md">
+                <div class="bg-white px-4 py-5 sm:p-6">
+                  <div class="grid grid-cols-6 gap-6">
+                    <div class="col-span-6 sm:col-span-3">
+                      <label for="name" class="block text-sm font-medium text-gray-700">1)Company Name</label>
+                      <input type="text" name="company-name" id="company-name" autocomplete="given-name"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+
+                    <div class="col-span-6 sm:col-span-3">
+                      <label for="designation" class="block text-sm font-medium text-gray-700">Duration:</label>
+                      <input type="text" name="company-duration" id="company-duration" autocomplete="family-name"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+
+                    <div class="col-span-6">
+                      <label for="street-address" class="block text-sm font-medium text-gray-700">Designation:</label>
+                      <input type="text" name="company-designation" id="company-designation"
+                        autocomplete="street-address"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+                    <div class="col-span-6">
+                      <label for="about" class="block text-sm font-medium text-gray-700">Description</label>
+                      <div class="mt-1">
+                        <textarea id="description" name="description1" rows="3"
+                          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-span-6 sm:col-span-3">
+                      <label for="name" class="block text-sm font-medium text-gray-700">2)Company Name</label>
+                      <input type="text" name="company2-name" id="company2-name" autocomplete="given-name"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+
+                    <div class="col-span-6 sm:col-span-3">
+                      <label for="designation" class="block text-sm font-medium text-gray-700">Duration:</label>
+                      <input type="text" name="company2-duration" id="company2-duration" autocomplete="family-name"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+
+                    <div class="col-span-6">
+                      <label for="street-address" class="block text-sm font-medium text-gray-700">Designation:</label>
+                      <input type="text" name="company2-designation" id="company2-designation"
+                        autocomplete="street-address"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+                    <div class="col-span-6">
+                      <label for="about" class="block text-sm font-medium text-gray-700">Description</label>
+                      <div class="mt-1">
+                        <textarea id="description2" name="description2" rows="3"
+                          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-span-6 sm:col-span-3">
+                      <label for="name" class="block text-sm font-medium text-gray-700">3)Company Name</label>
+                      <input type="text" name="company3-name" id="company3-name" autocomplete="given-name"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+
+                    <div class="col-span-6 sm:col-span-3">
+                      <label for="designation" class="block text-sm font-medium text-gray-700">Duration:</label>
+                      <input type="text" name="company3-duration" id="company3-duration" autocomplete="family-name"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+
+                    <div class="col-span-6">
+                      <label for="street-address" class="block text-sm font-medium text-gray-700">Designation:</label>
+                      <input type="text" name="company3-designation" id="company3-designation"
+                        autocomplete="street-address"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    </div>
+                    <div class="col-span-6">
+                      <label for="about" class="block text-sm font-medium text-gray-700">Description</label>
+                      <div class="mt-1">
+                        <textarea id="description3" name="description3" rows="3"
+                          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hidden sm:block" aria-hidden="true">
+            <div class="py-5">
+              <div class="border-t border-gray-200"></div>
+            </div>
+          </div>
+          <div class="mt-10 sm:mt-0">
+            <div class="md:grid md:grid-cols-3 md:gap-6">
+              <div class="md:col-span-1">
+                <div class="px-4 sm:px-0">
+                  <h3 class="text-lg font-medium leading-6 text-gray-900 m-5">Professional Skills</h3>
+                  <p class="m-5">(Add join word with "_" and multiple skills with "space")</p>
+                </div>
+              </div>
+              <div class="mt-5 md:col-span-2 md:mt-0">
+                <div class="overflow-hidden shadow sm:rounded-md">
+                  <div class="bg-white px-4 py-5 sm:p-6">
+                    <div class="grid grid-cols-6 gap-6">
+                      <div class="col-span-6">
+                        <label for="about" class="block text-sm font-medium text-gray-700">Skills</label>
+                        <div class="mt-1">
+                          <textarea id="skills" name="skills" rows="4"
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hidden sm:block" aria-hidden="true">
+            <div class="py-5">
+              <div class="border-t border-gray-200"></div>
+            </div>
+          </div>
+          <div class="mt-10 sm:mt-0">
+            <div class="md:grid md:grid-cols-3 md:gap-6">
+              <div class="md:col-span-1">
+                <div class="px-4 sm:px-0">
+                  <h3 class="text-lg font-medium leading-6 text-gray-900 m-5">Project</h3>
+                </div>
+              </div>
+              <div class="mt-5 md:col-span-2 md:mt-0">
+                <div class="overflow-hidden shadow sm:rounded-md">
+                  <div class="bg-white px-4 py-5 sm:p-6">
+                    <div class="grid grid-cols-6 gap-6">
+                      <div class="col-span-6 sm:col-span-3">
+                        <label for="name" class="block text-sm font-medium text-gray-700">Project Title</label>
+                        <input type="text" name="project-name" id="project-name" autocomplete="given-name"
+                          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                      </div>
+
+                      <div class="col-span-6 sm:col-span-3">
+                        <label for="designation" class="block text-sm font-medium text-gray-700">Duration:</label>
+                        <input type="text" name="project-duration" id="project-duration" autocomplete="family-name"
+                          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                      </div>
+                      <div class="col-span-6">
+                        <label for="about" class="block text-sm font-medium text-gray-700">Description</label>
+                        <div class="mt-1">
+                          <textarea id="description" name="description" rows="3"
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="hidden sm:block" aria-hidden="true">
+                <div class="py-5">
+                  <div class="border-t border-gray-200"></div>
+                </div>
+              </div>
+              <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+                <div class="mt-5 inline-flex rounded-md shadow">
+                  <!-- <a href="#"
+                    class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">Save</a> -->
+                  <button type="submit"
+                    class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">Submit</button>
+                </div>
+                <div class="mt-5 ml-3 inline-flex rounded-md shadow">
+                  <a href="#"
+                    class="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-indigo-50">Select
+                    Resume</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
